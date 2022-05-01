@@ -157,6 +157,14 @@ nav {
     margin-left: 0.3rem;
 }
 
+.yellow_line {
+    background: var(--yellow);
+}
+
+.red_line {
+    background: var(--soft-red);
+}
+
 .red_line,
 .yellow_line {
     width: calc(100% + 0.5rem);
@@ -166,14 +174,14 @@ nav {
     left: 0;
     right: 0;
     margin-top: -0.4rem;
-    display: none;
+    background: transparent;
 }
 
-.yellow_line {
+.styled_button:hover+.yellow_line {
     background: var(--yellow);
 }
 
-.red_line {
+.styled_button:hover+.red_line {
     background: var(--soft-red);
 }
 
@@ -378,18 +386,9 @@ nav {
     }
 
     .humburger_menu {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .humburger_menu li {
-        width: 1.5rem;
-        margin: 0.1rem 0;
-        height: 0.2rem;
-        background: var(--white);
+        display: block;
+        width: 1.4rem;
+        height: 1.4rem;
     }
 
     .overlay {
@@ -408,7 +407,7 @@ nav {
         right: 0;
         width: 2rem;
         height: 2rem;
-        margin: 0.91rem;
+        margin: 1rem;
         width: 0;
         height: 0;
         border-bottom: 100px solid white;
