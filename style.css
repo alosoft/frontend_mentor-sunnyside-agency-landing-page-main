@@ -122,6 +122,26 @@ nav {
     color: var(--white);
 }
 
+@keyframes arrow_anim {
+    0%{
+        top: 0;
+    }
+    50%{
+        top: 3rem;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+.arrow {
+    position: relative;
+    top: 0;
+    animation-name: arrow_anim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
 .grid__text {
     display: flex;
     flex-direction: column;
@@ -166,10 +186,11 @@ nav {
 }
 
 @keyframes line_animation {
-    100%{
+    100% {
         width: calc(100% + 0.5rem);
     }
 }
+
 .red_line,
 .yellow_line {
     width: .1rem;
