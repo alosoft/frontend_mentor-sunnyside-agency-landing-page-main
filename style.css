@@ -165,9 +165,14 @@ nav {
     background: var(--soft-red);
 }
 
+@keyframes line_animation {
+    100%{
+        width: calc(100% + 0.5rem);
+    }
+}
 .red_line,
 .yellow_line {
-    width: calc(100% + 0.5rem);
+    width: .1rem;
     height: 0.3rem;
     border-radius: 1rem;
     bottom: 0;
@@ -178,10 +183,16 @@ nav {
 }
 
 .styled_button:hover+.yellow_line {
+    animation-name: line_animation;
+    animation-duration: .8s;
+    animation-fill-mode: both;
     background: var(--yellow);
 }
 
 .styled_button:hover+.red_line {
+    animation-name: line_animation;
+    animation-duration: .8s;
+    animation-fill-mode: both;
     background: var(--soft-red);
 }
 
